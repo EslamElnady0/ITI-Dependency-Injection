@@ -20,10 +20,6 @@ interface AppContainer{
     val remoteDataSource: RemoteDataSource
     val localDataSource: LocalDataSource
     val productsRepository: ProductsRepository
-
-    val favProductsFactory: FavProductFactory
-
-    val allProductsFactory: AllProductFactory
 }
 
 
@@ -42,12 +38,5 @@ class AppContainerImpl(val context: Context) : AppContainer{
     }
     override val productsRepository: ProductsRepository by lazy {
         ProductsRepositoryImpl.getInstance(remoteDataSource, localDataSource)
-    }
-    override val favProductsFactory: FavProductFactory by lazy {
-        FavProductFactory(productsRepository)
-    }
-
-    override val allProductsFactory: AllProductFactory by lazy {
-        AllProductFactory(productsRepository)
     }
 }

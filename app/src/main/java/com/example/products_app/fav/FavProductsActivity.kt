@@ -23,7 +23,7 @@ class FavProductsActivity : ComponentActivity() {
         appContainer = (application as ProductsApplication).appContainer
         setContent {
             val viewModel = ViewModelProvider(this,
-                appContainer.favProductsFactory
+                FavProductFactory(appContainer.productsRepository)
             )[FavProductsViewModel::class.java]
             FavProductsScreen(viewModel)
         }

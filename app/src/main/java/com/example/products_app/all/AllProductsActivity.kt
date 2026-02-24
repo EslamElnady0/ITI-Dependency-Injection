@@ -22,7 +22,7 @@ class AllProductsActivity : ComponentActivity() {
         setContent {
 
             val viewModel = ViewModelProvider(this,
-                appContainer.allProductsFactory
+                AllProductFactory(appContainer.productsRepository)
             )[AllProductsViewModel::class.java]
 
             AllProductsScreen(viewModel)
