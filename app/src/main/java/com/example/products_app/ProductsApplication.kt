@@ -1,11 +1,15 @@
 package com.example.products_app
 
 import android.app.Application
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.GlobalContext.startKoin
 
 class ProductsApplication : Application() {
-    lateinit var appContainer: AppContainer
     override fun onCreate() {
         super.onCreate()
-        appContainer = AppContainerImpl(this)
+        startKoin {
+            androidContext(this@ProductsApplication)
+            modules(myModule)
+        }
     }
 }

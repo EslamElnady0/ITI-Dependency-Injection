@@ -81,5 +81,8 @@ dependencies {
     val compose_version = "1.0.0"
     implementation ("androidx.compose.runtime:runtime-livedata:$compose_version")
     implementation ("com.airbnb.android:lottie-compose:6.6.3")
+    //koin
+    implementation("io.insert-koin:koin-android:4.0.2")
+    implementation("io.insert-koin:koin-androidx-compose:4.0.2")
 
 }
