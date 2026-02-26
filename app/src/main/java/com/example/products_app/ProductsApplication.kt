@@ -1,11 +1,7 @@
 package com.example.products_app
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class ProductsApplication : Application() {
-    lateinit var appContainer: AppContainer
-    override fun onCreate() {
-        super.onCreate()
-        appContainer = AppContainerImpl(this)
-    }
-}
+@HiltAndroidApp
+class ProductsApplication : Application()

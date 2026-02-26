@@ -1,4 +1,4 @@
-package com.example.di_starterapplication.data.repository
+package com.example.products_app.data.repository
 
 import com.example.products_app.data.model.Product
 
